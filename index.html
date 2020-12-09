@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>动态加载静态资源</title>
+  <script src="./load-source.js"></script>
+</head>
+<body>
+<script>
+  var allList = [
+    { type: 'style', link: './css/test.css' },
+    { type: 'script', link: 'https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js' },
+    { type: 'script', link: 'https://cdn.bootcdn.net/ajax/libs/Chart.js/3.0.0-beta.6/chart.min.js' },
+    { type: 'script', link: 'https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js' },
+  ]
+
+  loadSource.all(allList, function () {
+    alert('所有资源加载完毕')
+  })
+
+  loadSource.style('./css/test.css', function () {
+    console.log('一个样式加载完毕')
+  })
+  loadSource.script('https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js', function () {
+    console.log('一个javascript加载完毕')
+  })
+
+</script>
+</body>
+</html>
