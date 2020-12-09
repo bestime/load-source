@@ -72,12 +72,12 @@ var loadSource = (function () {
     })
   }
 
-  function loadScript (src, onload) {
-    return loadStaticSource('script', src, onload)  
+  function loadScript (src) {
+    return loadStaticSource('script', src)  
   }
 
-  function loadStyle (href, onload) {
-    return loadStaticSource('style', href, onload)
+  function loadStyle (href) {
+    return loadStaticSource('style', href)
   }
 
   return {
