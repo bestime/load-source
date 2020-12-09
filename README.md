@@ -1,4 +1,6 @@
-## 动态加载javascript、css资源
+# 动态加载javascript、css资源
+
+## callback 版
 
 > 载入资源
 
@@ -36,4 +38,24 @@ var allList = [
 loadSource.all(allList, function () {
   console.log('所有资源加载完毕')
 })
+```
+
+
+
+
+
+## Promise 版
+
+> 载入资源
+
+```html
+<script src="./load-source.promise.js"></script>
+```
+
+```javascript
+// 加载css文件
+await loadSource.style('./css/test.css')
+// 加载js文件
+await loadSource.script('https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js')
+console.log('Promise版：所有资源加载完毕')
 ```

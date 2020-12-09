@@ -1,6 +1,5 @@
 /*!
  * 纯js加载静态资源
- * 注：加载成功使用回调方式，如果要使用Promise请自行封装
  * (1)、 loadSource.all(list, onload) 加载一个资源列表
  * (2)、 loadSource.style(link, onload) 加载单个css文件
  * (3)、 loadSource.script(link, onload) 加载单个js文件

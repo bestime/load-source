@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>动态加载静态资源</title>
+  <script src="./load-source.promise.js"></script>
+</head>
+<body>
+  <a href="index.html">查看callback版</a>
+<script>
+  ;(async function () {
+    console.log('开始加载')
+    await loadSource.style('./css/test.css')
+    await loadSource.script('https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js')
+    await loadSource.script('https://cdn.bootcdn.net/ajax/libs/Chart.js/3.0.0-beta.6/chart.min.js')
+
+    alert('Promise版：所有资源加载完毕')
+  })();
+
+</script>
+</body>
+</html>
