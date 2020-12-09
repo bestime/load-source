@@ -27,6 +27,12 @@ loadSource.style('./css/test.css', function () {
 > 批量加载一个资源列表
 
 ```javascript
+var allList = [
+  { type: 'style', link: './css/test.css' },
+  { type: 'script', link: 'https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js' },
+  { type: 'script', link: 'https://cdn.bootcdn.net/ajax/libs/Chart.js/3.0.0-beta.6/chart.min.js' },
+  { type: 'script', link: 'https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js' },
+]
 loadSource.all(allList, function () {
   console.log('所有资源加载完毕')
 })
